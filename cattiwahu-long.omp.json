@@ -35,9 +35,9 @@
           "style": "powerline",
           "trailing_diamond": "\ue0b0",
           "foreground_templates": [
-            "{{ if .Env.CONTAINER_ID }}#74c7ec{{ end }}"
+            "{{ if .Env.CONTAINER_ID }}#313244{{ end }}"
           ],
-          "template": "{{ if .SSHSession }}\ueba9 {{ end }}{{ if .Env.CONTAINER_ID }} \uf487 {{ .Env.CONTAINER_ID }} {{ else }} \udb80\udc01 {{ .HostName }} {{ end }}",
+          "template": "{{ if .SSHSession }}\ueba9 {{ end }}{{ if .Env.CONTAINER_ID }} \uf487  {{ else }} \udb80\udc01  {{ end }}{{ .HostName }} ",
           "type": "session"
         },
         {
@@ -45,11 +45,11 @@
           "foreground": "#cdd6f4",
           "options": {
             "folder_icon": "\uea7c",
-            "style": "folder"
+            "style": "full"
           },
           "style": "powerline",
           "powerline_symbol": "\ue0b0",
-          "template": "{{ if and (ne .Path \"/\") (ne .Path \"~\")}} \uea7c/{{ .Path }} {{ else }} {{ .Path }} {{ end }}",
+          "template": "{{ if and (ne .Path \"/\") (ne .Path \"~\")}} {{ .Path }} {{ else }} {{ .Path }} {{ end }}",
           "type": "path"
         }
       ],
@@ -60,8 +60,8 @@
       "newline": false,
       "segments": [
         {
-          "background": "#222222",
-          "foreground": "#74c7ec",
+          "background": "#cdd6f4",
+          "foreground": "#313244",
           "options": {
             "branch_icon": "\ue725 ",
             "cherry_pick_icon": "\ue29b ",
@@ -126,7 +126,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#74c7ec",
+          "foreground": "#313244",
           "style": "plain",
           "template": "{{ .Name }} ",
           "type": "shell",
