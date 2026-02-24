@@ -35,9 +35,9 @@
           "style": "powerline",
           "trailing_diamond": "\ue0b0",
           "foreground_templates": [
-            "{{ if .Env.CONTAINER_ID }}#313244{{ end }}"
+            "{{ if .Env.CONTAINER_ID }}#89b4fa{{ end }}"
           ],
-          "template": "{{ if .SSHSession }}\ueba9 {{ end }}{{ if .Env.CONTAINER_ID }} \uf487  {{ else }} \udb80\udc01  {{ end }}{{ .HostName }} ",
+          "template": "{{ if .SSHSession }}\ueba9 {{ end }}{{ if .Env.CONTAINER_ID }} \uf487 {{ .Env.CONTAINER_ID }} {{ else }} \udb80\udc01 {{ .HostName }} {{ end }}",
           "type": "session"
         },
         {
@@ -130,7 +130,7 @@
           "style": "plain",
           "template": "{{ .Name }} ",
           "type": "shell",
-          "properties": {
+          "options": {
             "mapped_shell_names": {
               "pwsh": "\u276f",
               "shell": "\u276f",
