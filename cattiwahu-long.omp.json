@@ -37,7 +37,7 @@
           "background_templates": [
             "{{ if .Env.CONTAINER_ID }}#89b4fa{{ end }}"
           ],
-          "template": "{{ if .SSHSession }}\ueba9 {{ end }}{{ if .Env.CONTAINER_ID }} \uf487 {{ .Env.CONTAINER_ID }} {{ else }} \udb80\udc01 {{ .HostName }} {{ end }}",
+          "template": "{{ if .SSHSession }} \ueba9 {{ end }}{{ if .Env.CONTAINER_ID }} \uf487 {{ .Env.CONTAINER_ID }} {{ else }} \udb80\udc01 {{ .HostName }} {{ end }}",
           "type": "session"
         },
         {
